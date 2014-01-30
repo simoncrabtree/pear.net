@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Configuration;
+using System.Web.Mvc;
 
 namespace pear.web.Controllers
 {
@@ -9,6 +10,8 @@ namespace pear.web.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.Environment = ConfigurationManager.AppSettings["Environment"];
+            
             return View();
         }
 
