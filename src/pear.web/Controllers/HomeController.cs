@@ -10,10 +10,15 @@ namespace pear.web.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.Environment = ConfigurationManager.AppSettings["Environment"];
+            var viewModel = new HomeIndexViewModel {Environment = ConfigurationManager.AppSettings["Environment"]};
             
-            return View();
+            return View(viewModel);
         }
 
+    }
+
+    public class HomeIndexViewModel
+    {
+        public string Environment { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 using SpecsFor;
 using SpecsFor.Mvc;
 using SpecsFor.Mvc.Helpers;
+using Should;
 using pear.web.Controllers;
 
 namespace pear.web.specs.HomeControllerSpecs
@@ -14,9 +15,15 @@ namespace pear.web.specs.HomeControllerSpecs
         }
 
         [Test]
-        public void then_it_sends_email()
+        public void ItGetsRoutedCorrectly()
         {
             SUT.Route.ShouldMapTo<HomeController>(c => c.Index());
+        }
+
+        [Test]
+        public void ItIsRunningInDebugMode()
+        {
+            SUT.FindDisplayFor<HomeIndexViewModel>().DisplayFor(m => m.Environment).Text.ShouldEqual("Debug");
         }
     }
 }
