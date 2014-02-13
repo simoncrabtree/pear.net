@@ -23,7 +23,7 @@ namespace pear.web.specs.HomeControllerSpecs
         [Test]
         public void ItIsRunningInDebugMode()
         {
-            SUT.FindDisplayFor<HomeIndexViewModel>().DisplayFor(m => m.Environment).Text.ShouldEqual("Debug");
+            SUT.FindDisplayFor<HomeIndexViewModel>().DisplayFor(m => m.Environment).Text.ShouldEqual("Development");
         }
     }
 }
