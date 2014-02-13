@@ -1,5 +1,4 @@
-﻿using System.Configuration;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace pear.web.Controllers
 {
@@ -10,9 +9,13 @@ namespace pear.web.Controllers
 
         public ActionResult Index()
         {
+<<<<<<< HEAD
             var viewModel = new HomeIndexViewModel {Environment = ConfigurationManager.AppSettings["Environment"]};
             
             return View(viewModel);
+=======
+            return View();
+>>>>>>> parent of 53f15fe... Home_Index view displays the environment setting from the config file
         }
 
     }

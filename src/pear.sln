@@ -13,7 +13,6 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-		UAT|Any CPU = UAT|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{550E0B81-A05F-4D80-B766-3B2688767EBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
